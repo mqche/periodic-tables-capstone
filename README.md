@@ -1,6 +1,16 @@
 # Reservation Tracker App
 This is app built built to track and create reservations for restaurants. It was built using React, Bootstrap, Knex, Node, and Express.
 
+# App images
+### DASHBOARD
+![Dashboard with Table & Buttons](./images/dashboard.png)
+### NEW RESERVATION FORM
+![Mobile Search Form](./images/mobilesearch.png)
+### RESERVATION ON DISPLAY, OCCUPIED TABLE & FINISH BUTTON ON TABLE
+![New Reservation Form](./images/newreservation.png)
+
+
+# API Documentation
 
 ### 1. Installation instructions
 1. Fork or clone this repository
@@ -86,24 +96,6 @@ App allows user to create and edit both tables and reservations.
 | `/tables`                              | POST   | Creates a new table.                                                                                  |
 | `/tables/:tableId/seat`                | PUT    | Assigns a reservation to a table.                                                                     |
 | `/tables/:tableId/seat`                | DELETE | Clears a table for future use.                                                                        |
-
-
-### 7. Screenshots
-Dashboard
-:-------------------------:
-![Dashboard](/images/dashboard.png)
-
-Search
-:-------------------------:
-![Search](/images/search.png)
-
-Add Reservation
-:-------------------------:
-![Add Reservation](/images/addRes.png)
-
-Add Table
-:-------------------------:
-![Add Table](/images/addTable.png)
 
 
 ##### Local React scripts
