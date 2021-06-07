@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router";
 import ErrorAlert from "../layout/ErrorAlert";
 
 export default function NewReservation() {
-  const [errors, setErrors] = useState(null);
+  const [errors, setErrors] = useState([]);
   const history = useHistory();
 
   const [formFields, setFormFields] = useState({
@@ -39,7 +39,7 @@ export default function NewReservation() {
     const formattedInputValue = formatPhoneNumber(target.value);
     setFormFields({
       ...formFields,
-      mobile_number: formattedInputValue,
+      mobile_number: formattedInputValue.replace(/[^\d]/g, "")
     });
   };
 
@@ -81,7 +81,7 @@ export default function NewReservation() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    setErrors(null);
+    setErrors([]);
     const foundErrors = validateDate();
     if (!foundErrors.length) {
       if (reservation_id) {
@@ -102,7 +102,7 @@ export default function NewReservation() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        {errors && <ErrorAlert error={errors} />}
+        {errors.length > 0 && <ErrorAlert error={errors} />}
         <div className="form-group">
           <label htmlFor="first_name">First Name:&nbsp;</label>
           <input

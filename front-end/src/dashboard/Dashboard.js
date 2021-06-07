@@ -14,24 +14,24 @@ import ReservationCard from "./ReservationCard";
  */
 function Dashboard({ date }) {
   const [reservations, setReservations] = useState([]);
-  const [reservationsError, setReservationsError] = useState(null);
-
+  const [reservationsError, setReservationsError] = useState([]);
+	const [tablesError, setTablesError] = useState([]);
   const [tables, setTables] = useState([]);
-  const [tablesError, setTablesError] = useState(null);
+  
   const history = useHistory();
 
   useEffect(loadDashboard, [date]);
 
   function loadDashboard() {
     const abortController = new AbortController();
-    setReservationsError(null);
+    setReservationsError([]);
     listReservations({ date }, abortController.signal)
       .then(setReservations)
-      .catch(setReservationsError);
+      .catch(err => setReservationsError([ err ]))
 
     listTables(abortController.signal)
       .then(setTables)
-      .catch(setTablesError)
+      .catch(err => setTablesError([ err ]))
     return () => abortController.abort();
   }
 

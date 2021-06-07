@@ -201,6 +201,29 @@ function hasValidFields(req, res, next) {
     });
   }
 
+  if (!data.first_name || data.first_name.length === 0) {
+    return next({
+      status: 400,
+      message: "Must include valid first_name!",
+    });
+  }
+
+  if (!data.last_name || data.last_name.length === 0) {
+    return next({
+      status: 400,
+      message: "Must include valid last_name!",
+    });
+  }
+
+  if (
+    !data.mobile_number
+  ) {
+    return next({
+      status: 400,
+      message: "Must include valid mobile_number!",
+    });
+  }
+
   const reserveDate = new Date(
     data.reservation_date
   );

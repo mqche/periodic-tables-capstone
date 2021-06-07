@@ -21,7 +21,10 @@ const ReservationCard = ({ reservation, onCancel }) => {
         {reservation.status === "booked" ? (
           <a href={`/reservations/${reservation.reservation_id}/seat`} className="btn btn-outline-primary mr-2">Seat</a>) : null
         }
-        <a href={`/reservations/${reservation.reservation_id}/edit`} className="btn btn-primary mr-2">Edit</a>
+        {reservation.status !== "seated" ? (
+          <a href={`/reservations/${reservation.reservation_id}/edit`} className="btn btn-primary mr-2">Edit</a>
+        ) : null
+        }
         <button className="btn btn-outline-primary mr-2" data-reservation-id-cancel={reservation.reservation_id} onClick={handleCancel}>Cancel</button>
       </ul>
     </ >
