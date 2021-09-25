@@ -1,5 +1,5 @@
 # Reservation Tracker App
-This is app built built to track and create reservations for restaurants. It was built using React, Bootstrap, Knex, Node, and Express.
+This app is used to create, edit, and track reservation data for restaurants. It was built using React, Bootstrap, Knex, Node, and Express.
 
 # App images
 ### DASHBOARD
