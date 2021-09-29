@@ -17,14 +17,12 @@ This app is used to create, edit, and track reservation data for restaurants. It
 2. Run npm i
 3. cd front-end && npm i
 4. cd ../back-end && npm i
-5. Create a .env file in the backend directory.  Update each url to the appropriate database URL
-6. Modify `.env` with the following:</br>
+5. Create two PostgreSQL database instances to run or test the app.
+6. Create a .env file in the backend directory.  Update each url to the appropriate database URL
+7. Modify `.env` with the following:</br>
    <code>
-   &nbsp;DATABASE*URL=\_productionURL*</br>
    &nbsp;DATABASE*URL_DEVELOPMENT=\_developmentURL*</br>
    &nbsp;DATABASE*URL_TEST=\_testURL*</br>
-   &nbsp;DATABASE*URL_PREVIEW=\_previewURL*</br>
-   &nbsp;LOG_LEVEL=info</br>
    </code> 
 7. Create a `.env` file in the `frontend` directory.
 8. Modify `.env` with the following:</br>
