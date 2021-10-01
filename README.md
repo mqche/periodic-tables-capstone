@@ -17,19 +17,19 @@ This app is used to create, edit, and track reservation data for restaurants. It
 2. Run npm i
 3. cd front-end && npm i
 4. cd ../back-end && npm i
-5. Create two PostgreSQL database instances to run or test the app.
-6. Create a .env file in the backend directory.  Update each url to the appropriate database URL
+5. Create two PostgreSQL database instances to run or test the app
+6. Create a .env file in the backend directory
 7. Modify `.env` with the following:</br>
    <code>
    &nbsp;DATABASE*URL_DEVELOPMENT=\_developmentURL*</br>
    &nbsp;DATABASE*URL_TEST=\_testURL*</br>
    </code> 
-7. Create a `.env` file in the `frontend` directory.
+7. Create a `.env` file in the `frontend` directory
 8. Modify `.env` with the following:</br>
    <code>REACT_APP_API_BASE_URL=http://localhost:5000<br/></code>
-9. From inside the backend directory, run `npx knex migrate:latest`.
-10. Run `npx knex seed:run`.
-11. Go back to the main directory and run `npm run start:dev` to run the application locally.
+9. From inside the backend directory, run `npx knex migrate:latest`
+10. Run `npx knex seed:run`
+11. Go back to the main directory and run `npm run start:dev` to run the application locally
 
 ### 2. User Stories 
 This app is built for a restaurant manager.
