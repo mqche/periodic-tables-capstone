@@ -21,8 +21,8 @@ This app is used to create, edit, and track reservation data for restaurants. It
 6. Create a .env file in the backend directory
 7. Modify `.env` with the following:</br>
    <code>
-   &nbsp;DATABASE*URL_DEVELOPMENT=\_developmentURL*</br>
-   &nbsp;DATABASE*URL_TEST=\_testURL*</br>
+   &nbsp;DATABASE_URL_DEVELOPMENT=\_developmentURL*</br>
+   &nbsp;DATABASE_URL_TEST=\_testURL*</br>
    </code> 
 7. Create a `.env` file in the `frontend` directory
 8. Modify `.env` with the following:</br>
